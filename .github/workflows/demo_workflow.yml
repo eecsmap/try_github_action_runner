@@ -1,0 +1,16 @@
+name: demo workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  demo:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: check version
+        run: sw_vers
